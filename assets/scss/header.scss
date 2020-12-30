@@ -1,0 +1,238 @@
+#over{
+  display: block;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #3b3b3b;
+  transition: 0.3s;
+}
+#masthead{
+  font-family: "Fira Sans";
+  padding-bottom: 20px;
+  font-weight: 400;
+  #site-navigation{
+    .social{
+      display: none;
+    }
+  }
+  @media (min-width: 930px) {
+    background: url("../img/Shape-1-copy-33-1.png") no-repeat 25% -140px;
+    background-size: auto;
+    padding-top: 30px;
+  }
+  @media (max-width: 929px){
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    &.container{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    & > div, & > nav{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    #site-navigation{
+      background-color: #28232d;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .social, .social a{
+        display: inline-block;
+      }
+    }
+  }
+
+  .header-row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (max-width: 929px){
+      padding-top: 35px;
+      padding-bottom: 35px;
+      & > div:first-child{
+        width: 45%;
+      }
+    }
+  }
+  .flex-contacts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+
+    & > div {
+      @media (min-width: 930px) {
+        margin-left: 30px;
+      }
+    }
+  }
+  .text-phones{
+    color: #8c8f99;
+    font-size: 13px;
+    line-height: 16px;
+    position: relative;
+    &:after{
+      display: inline-block;
+      position: absolute;
+      right: -30px;
+      top: 0;
+      content: '';
+      height: 100%;
+      width: 1px;
+      background-color: #d8d8d8;
+    }
+    @media (max-width: 929px){
+      display: none;
+    }
+  }
+  .social a{
+    margin-left: 25px;
+    @media (max-width: 929px){
+      display: none;
+    }
+  }
+  .naumber-phones{
+    font-family: Glober-Black;
+    font-size: 20px;
+    line-height: 18px;
+    position: relative;
+    @media (min-width: 930px){
+      margin-left: 80px!important;
+    }
+    @media (max-width: 374px){
+      font-size: 5vw;
+    }
+    text-align: right;
+    &::before{
+      content: '';
+      background: url("../img/phone-icon.png") no-repeat center;
+      transform: rotate(45deg);
+      background-size: cover;
+      display: inline-block;
+      position: absolute;
+      left: -30px;
+      top: 6px;
+      height: 20px;
+      width: 20px;
+    }
+  }
+  #primary-menu{
+    justify-content: flex-end;
+    li{
+      margin-left: 25px;
+      &:not(:last-child){padding-right: 25px;}
+      font-size: 15px;
+      @media (min-width: 930px) {
+        &::after {
+          content: "";
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          background: $green;
+          opacity: 0;
+          transition: opacity .2s linear;
+        }
+      }
+
+      a{
+        color: #343740;
+        transition: color .2s linear;
+        @media (max-width: 929px){
+          font-size: 23px;
+          line-height: 75px;
+          color: #fff;
+          white-space: nowrap;
+        }
+        @media (max-width: 374px){
+          font-size: 20px;
+          line-height: 60px;
+          color: #fff;
+          white-space: nowrap;
+        }
+      }
+      &.current-menu-item a,
+      &:hover a{
+        color: $green;
+      }
+      &.current-menu-item::after,
+      &:hover::after{
+        opacity: 1;
+      }
+      @media (max-width: 929px){
+        border-bottom: 1px solid #332e38;
+        padding-right: unset;
+        margin-right: 15px;
+        padding-left: 40px;
+        position: relative;
+        &:first-child{
+          border-top: 1px solid #332e38;
+        }
+        &::before{
+          content: "";
+          width: 7px;
+          height: 7px;
+          border-bottom: 1px solid #fff;
+          border-left: 1px solid #fff;
+          transform: rotate(-135deg);
+          display: inline-block;
+          position: absolute;
+          left: 15px;
+          top: 50%;
+          margin-top: -4px;
+        }
+      }
+    }
+    @media (max-width: 929px) {
+      display: block;
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 6;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 80px;
+    }
+  }
+  .menu-toggle {
+    position: relative;
+    z-index: 7;
+    cursor: pointer;
+    &:focus{
+      outline: none;
+    }
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+    display: block;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+    transform: rotate(-45deg) translate(-7px, 6px);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}

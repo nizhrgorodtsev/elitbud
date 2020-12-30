@@ -1,0 +1,215 @@
+.post, .page {
+  margin: 0;
+}
+
+#footer-menu {
+  justify-content: center;
+  margin: 0 0 40px 0;
+  padding: 30px 0;
+  border-bottom: 1px solid #3e3942;
+  li {
+    a{
+      transition: color 0.2s linear;
+      color: #fff;
+    }
+    &:hover{
+      a{
+        color: $green;
+      }
+    }
+    margin: 0 15px;
+    @media (max-width: 929px) {
+      margin: 0 15px 30px 15px;
+      a {
+        position: relative;
+        padding-left: 20px;
+        display: inline-block;
+        &::before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          border-left: 1px solid $green;
+          border-bottom: 1px solid $green;
+          transform: rotate(-135deg);
+          position: absolute;
+          top: 7px;
+          left: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 929px){
+    margin-bottom: unset;
+    padding-bottom: unset;
+    border: none;
+  }
+}
+
+footer#colophon {
+  background: #28232d;
+  height: 450px;
+  color: #FFFFFF;
+  @media (max-width: 929px) {
+    height: unset;
+  }
+
+  .flex-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+
+    & > div {
+      margin-left: 30px;
+    }
+
+    & > img {
+      position: absolute;
+      top: -170px;
+      left: 0;
+    }
+
+    @media (max-width: 929px) {
+      & > div {
+        width: 100%;
+      }
+    }
+  }
+
+  .phone-section {
+    display: flex;
+    @media (max-width: 929px) {
+      justify-content: center;
+      margin-left: 0 !important;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .text-phones {
+    color: #8c8f99;
+    font-size: 13px;
+    line-height: 16px;
+    position: relative;
+
+    &:after {
+      display: inline-block;
+      position: absolute;
+      right: -30px;
+      top: 0;
+      content: '';
+      height: 100%;
+      width: 1px;
+      background-color: #d8d8d8;
+      @media (max-width: 767px) {
+        right: -15px;
+      }
+    }
+  }
+
+  .social {
+    a {
+      margin-left: 15px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      background: #fff;
+      transition: background-color .2s linear;
+      &:hover{
+        background: $green;
+      }
+    }
+
+    @media (max-width: 929px) {
+      text-align: center;
+      margin-left: 0 !important;
+    }
+  }
+
+  .naumber-phones {
+    font-family: Glober-Black;
+    font-size: 20px;
+    line-height: 18px;
+    position: relative;
+    margin-left: 80px !important;
+    text-align: right;
+
+    &::before {
+      content: '';
+      background: url("../img/phone-icon.png") no-repeat center;
+      transform: rotate(45deg);
+      background-size: cover;
+      display: inline-block;
+      position: absolute;
+      left: -30px;
+      top: 6px;
+      height: 20px;
+      width: 20px;
+      @media (max-width: 767px){
+        left: -20px;
+      }
+    }
+    @media (max-width: 767px) {
+      margin-left: 40px!important;
+      font-size: 15px;
+    }
+  }
+
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 929px) {
+      & > div {
+        width: 100%;
+      }
+    }
+  }
+
+  .site-branding {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 929px) {
+      justify-content: center;
+      border-bottom: 1px solid #3e3942;
+      padding-bottom: 40px;
+      padding-top: 40px;
+    }
+  }
+
+  .copyright {
+    margin-left: 30px;
+    color: #8c8f99;
+    font-size: 13px;
+    line-height: 21px;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .main-navigation {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      @media (max-width: 929px) {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns:repeat(2, 1fr) ;
+      }
+    }
+  }
+
+  @media (max-width: 929px) {
+    .footer-reverse {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+

@@ -1,0 +1,48 @@
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12{
+  img{
+    max-width: 100%;
+  }
+}
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.align-items-center{
+  align-items: center;
+}
+.align-center{
+  align-items: center;
+}
+.position-relative{
+  position: relative;
+}
+
+h2.green-line{
+  line-height: 33px;
+  letter-spacing: -1px;
+}
+.green-line{
+  padding-left: 20px;
+  position: relative;
+  &::before{
+    content: '';
+    height: 100%;
+    width: 3px;
+    background: $green;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
