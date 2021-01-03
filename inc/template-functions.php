@@ -75,19 +75,19 @@ add_editor_style( 'style-editor.css' );
 
 add_action('acf/init', 'my_acf_init_block_types');
 function my_acf_init_block_types() {
-
     // Check function exists.
     if( function_exists('acf_register_block_type') ) {
-
-        // register a testimonial block.
         acf_register_block_type(array(
             'name'              => 'infrastructure',
             'title'             => __('Інфраструктура'),
             'description'       => __('Блок Інфраструктура'),
-            'render_template'   => 'template-parts/blocks/infrastructure.php',
+            'render_template'   => 'template-parts/blocks/infrastructure/infrastructure.php',
+            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/infrastructure/infr.css',
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
-            'keywords'          => array( 'infrastructure' ),
+            'keywords'          => array( 'infrastructure'),
+            'post_types'        => array('building', 'post'),
+            'mode' => 'auto',
         ));
     }
 }

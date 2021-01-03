@@ -414,6 +414,10 @@ h2.green-line {
     bottom: 0;
     left: 0; }
 
+.w-100 {
+  width: 100% !important;
+  max-width: 100% !important; }
+
 #over {
   display: block;
   height: 100%;
@@ -1374,24 +1378,35 @@ footer#colophon {
       -ms-flex-direction: column-reverse;
       flex-direction: column-reverse; } }
 
-#info h3 {
+.green-separator {
+  height: 60px;
+  max-width: 450px;
+  background: url("../img/vawe-green.png") repeat-x center; }
+
+#info h3, #plans h3, #progress h3 {
   margin-top: 0;
   text-align: center;
   background: url("../img/line.png") repeat-x center;
   max-width: 930px;
   margin-left: auto;
   margin-right: auto; }
-  #info h3 span {
+  #info h3 span, #plans h3 span, #progress h3 span {
     display: inline-block;
     padding-left: 30px;
     padding-right: 30px; }
     @media (max-width: 767px) {
-      #info h3 span {
+      #info h3 span, #plans h3 span, #progress h3 span {
         padding-left: 15px;
         padding-right: 15px; } }
 
-#info h3 span {
+#info h3 span, #plans h3 span {
   background: #FFFFFF; }
+
+#progress h3 {
+  background: url("../img/vawe-dark-back.png") repeat-x center; }
+  #progress h3 span {
+    background: #28232d;
+    color: #FFFFFF; }
 
 #breadcrumbs {
   background: #28232d;
@@ -1484,10 +1499,6 @@ footer#colophon {
       left: -30px;
       top: 50%;
       margin-top: -7px; }
-  #start .main-info .green-separator {
-    height: 60px;
-    max-width: 450px;
-    background: url("../img/vawe-green.png") repeat-x center; }
   #start .main-info .specifications {
     padding-top: 50px;
     display: -webkit-box;
@@ -1507,3 +1518,257 @@ footer#colophon {
 
 #info {
   padding-top: 80px; }
+  #info .gallery-item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 260px;
+    position: relative; }
+    #info .gallery-item a {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-transition: background-color .2s linear;
+      -o-transition: background-color .2s linear;
+      transition: background-color .2s linear; }
+      #info .gallery-item a span {
+        opacity: 0;
+        -webkit-transition: opacity .2s linear;
+        -o-transition: opacity .2s linear;
+        transition: opacity .2s linear;
+        color: #fff;
+        font-size: 13px;
+        text-transform: uppercase;
+        position: relative; }
+        #info .gallery-item a span::before {
+          content: url("../img/zoom.png");
+          position: absolute;
+          top: -25px;
+          left: 50%;
+          margin-left: -13px; }
+      #info .gallery-item a:hover {
+        background-color: rgba(0, 0, 0, 0.6); }
+        #info .gallery-item a:hover span {
+          opacity: 1; }
+
+#plans {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  /* Fade in tabs */ }
+  #plans .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; }
+    #plans .tabcontent .name {
+      font-size: 13px; }
+    #plans .tabcontent .value {
+      font-size: 18px;
+      font-weight: 700; }
+    #plans .tabcontent h4 {
+      margin-bottom: 0;
+      font-weight: 700;
+      position: relative; }
+      #plans .tabcontent h4::before {
+        content: url("../img/Layer-21-.png");
+        position: absolute;
+        display: inline-block;
+        left: -50px;
+        top: 10px; }
+    #plans .tabcontent .adress {
+      font-size: 15px; }
+    #plans .tabcontent .specifications > div {
+      border-bottom: 1px solid #ebebeb;
+      padding-top: 20px;
+      padding-bottom: 20px; }
+    #plans .tabcontent .price-file {
+      margin-top: 40px; }
+      #plans .tabcontent .price-file .price, #plans .tabcontent .price-file .file {
+        display: block;
+        padding: 30px 10px;
+        text-align: center;
+        color: #fff;
+        font-weight: 700; }
+      #plans .tabcontent .price-file .price {
+        background-color: #5aca00; }
+      #plans .tabcontent .price-file .file {
+        background-color: #d51820;
+        text-decoration: none; }
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+  #plans .tab {
+    text-align: center; }
+  #plans .tablinks {
+    padding: 25px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background: unset;
+    font-size: 15px;
+    font-weight: bold;
+    color: #c3c3c3;
+    margin: 0 10px;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+    #plans .tablinks:focus {
+      outline: none; }
+    #plans .tablinks:hover, #plans .tablinks.active {
+      border: 2px solid #5aca00;
+      color: #5aca00; }
+
+#progress {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: #28232d; }
+  #progress .progress-gallery {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    padding-left: 15px;
+    padding-right: 15px; }
+    #progress .progress-gallery:not(:first-child) {
+      display: none; }
+    #progress .progress-gallery .left-top, #progress .progress-gallery .right-bottom {
+      height: 340px; }
+    #progress .progress-gallery .left-bottom, #progress .progress-gallery .right-top {
+      height: 260px; }
+    #progress .progress-gallery .left-top, #progress .progress-gallery .right-bottom,
+    #progress .progress-gallery .left-bottom, #progress .progress-gallery .right-top {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative; }
+      #progress .progress-gallery .left-top a, #progress .progress-gallery .right-bottom a,
+      #progress .progress-gallery .left-bottom a, #progress .progress-gallery .right-top a {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: background-color .2s linear;
+        -o-transition: background-color .2s linear;
+        transition: background-color .2s linear; }
+        #progress .progress-gallery .left-top a span, #progress .progress-gallery .right-bottom a span,
+        #progress .progress-gallery .left-bottom a span, #progress .progress-gallery .right-top a span {
+          opacity: 0;
+          -webkit-transition: opacity .2s linear;
+          -o-transition: opacity .2s linear;
+          transition: opacity .2s linear;
+          color: #fff;
+          font-size: 13px;
+          text-transform: uppercase;
+          position: relative; }
+          #progress .progress-gallery .left-top a span::before, #progress .progress-gallery .right-bottom a span::before,
+          #progress .progress-gallery .left-bottom a span::before, #progress .progress-gallery .right-top a span::before {
+            content: url("../img/zoom.png");
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            margin-left: -13px; }
+        #progress .progress-gallery .left-top a:hover, #progress .progress-gallery .right-bottom a:hover,
+        #progress .progress-gallery .left-bottom a:hover, #progress .progress-gallery .right-top a:hover {
+          background-color: rgba(0, 0, 0, 0.6); }
+          #progress .progress-gallery .left-top a:hover span, #progress .progress-gallery .right-bottom a:hover span,
+          #progress .progress-gallery .left-bottom a:hover span, #progress .progress-gallery .right-top a:hover span {
+            opacity: 1; }
+  #progress .right-border {
+    border-right: 10px solid #28232d; }
+  #progress .left-top {
+    border-bottom: 10px solid #28232d; }
+  #progress .right-bottom {
+    border-top: 10px solid #28232d; }
+  #progress .right-top:first-child {
+    border-right: 10px solid #28232d; }
+  #progress .left-bottom:last-child {
+    border-left: 10px solid #28232d; }
+
+#range-slider {
+  background-color: #3c3841;
+  height: 8px; }
+
+.range-slider {
+  margin-top: 40px; }
+  .range-slider .monthes {
+    display: grid;
+    margin-top: 30px; }
+  .range-slider .years {
+    display: grid;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #c3c3c3; }
+  .range-slider .noUi-touch-area:focus {
+    outline: none; }
+  .range-slider .month {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    color: #c3c3c3;
+    position: relative; }
+    .range-slider .month::before {
+      content: '';
+      display: inline-block;
+      border-right: 1px solid #3c3841;
+      height: 3px;
+      width: calc(50% - 0px);
+      position: absolute;
+      top: -12px;
+      left: 0; }
+  .range-slider .noUi-touch-area {
+    background: #8de300; }
+  .range-slider .noUi-handle {
+    width: 142.5px;
+    right: -71.25px;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    height: 14px;
+    top: -3px;
+    border: 1px solid #8de300; }
+    .range-slider .noUi-handle:focus {
+      outline: none; }
+  .range-slider .noUi-target {
+    border: unset;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    padding: 0 71.25px; }
+  .range-slider .noUi-connects {
+    margin: 0 -71.25px;
+    width: calc(100% + 71.25px); }
+  .range-slider .noUi-handle:after, .range-slider .noUi-handle:before {
+    height: 8px;
+    top: 2px;
+    background: #5aca00; }
+  .range-slider .noUi-handle:after {
+    left: calc(50%); }
+  .range-slider .noUi-handle:before {
+    left: calc(50% - 4px); }

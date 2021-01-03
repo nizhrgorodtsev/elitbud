@@ -1,0 +1,35 @@
+.infr-block .infr-row{
+    display: flex;
+    padding-top: 15px;
+}
+.infr-block .infr-row:not(:last-child){
+    border-bottom: 1px solid #ebebeb;
+}
+
+.infr-block .icon{
+    margin-right: 35px;
+}
+.infr-block .icon img{
+    max-width: 23px;
+}
+.infr-block .data-wrapper{
+    flex-grow: 1;
+}
+.infr-block .distance .dist-row{
+    display: flex;
+    justify-content: space-between;
+}
+.infr-block .infr-name{
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.infr-block .dist-name{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.infr-block  .dist-value{
+    font-size: 14px;
+    color: #8c8f99;
+    font-weight: 700;
+}
